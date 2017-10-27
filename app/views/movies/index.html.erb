@@ -1,0 +1,23 @@
+LIST OF MOVIES
+
+<table>
+	
+	<tr>
+		<td>Title</td>
+		<td>Year</td>
+	</tr>
+
+<% @movies.each do |movie| %>
+
+	<tr>
+		<td><%= movie.title %></td>
+		<td><%= movie.year %></td>
+	</tr>
+
+<% end %>
+
+
+</table> 
+
+<%= link_to 'Add a movie', new_movie_path %>
+

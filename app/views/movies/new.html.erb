@@ -1,0 +1,13 @@
+<h1>ADD A MOVIE</h1>
+
+<%= form_tag movies_path do%>
+
+	<%= label_tag 'Movie title :' %>
+	<%= text_field_tag 'title' %>
+	
+	<%= label_tag 'Release date :' %>
+	<%= text_field_tag 'year' %>
+	
+	<%= submit_tag 'Add movie' %>
+
+<%end%>
