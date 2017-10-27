@@ -5,6 +5,8 @@ LIST OF MOVIES
 	<tr>
 		<td>Title</td>
 		<td>Year</td>
+		<td>show</td>
+		<td>destroy</td>
 	</tr>
 
 <% @movies.each do |movie| %>
@@ -12,12 +14,15 @@ LIST OF MOVIES
 	<tr>
 		<td><%= movie.title %></td>
 		<td><%= movie.year %></td>
+		<td><%= link_to 'show', movie_path(movie) %></td>
+		<td><%= link_to 'destroy', movie_path(movie), method: :delete %></td>
 	</tr>
 
 <% end %>
 
 
 </table> 
-
+<br>
 <%= link_to 'Add a movie', new_movie_path %>
+
 
